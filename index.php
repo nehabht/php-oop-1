@@ -2,9 +2,9 @@
 
 include __DIR__ . "/db.php";
 
-// echo '<pre>';
-// var_dump($movies);
-// echo '</pre>';
+
+
+
 
 
 ?>
@@ -35,12 +35,16 @@ include __DIR__ . "/db.php";
                             <div class="card-top d-flex justify-content-center" >
                                 <img class="img-fluid" style="width: auto; height: 500px;" src="<?= $movie->image ?>" alt="">
                             </div>
-                            <div class="card-bottom ms-2 mt-2">
+                            <div class="card-bottom ms-2 mt-2 ">
                                 <h5><?= $movie->title ?></h5>
                                 <p class="d-flex flex-column"> Rating:
                                     <?= $movie->rating ?>
                                     <span> Year:
                                     <?= $movie->year ?>
+                                    </span>
+                                    <span>
+                                        <?= $movie->recommend() ?>
+                                        
                                     </span>
                                 </p>
 
